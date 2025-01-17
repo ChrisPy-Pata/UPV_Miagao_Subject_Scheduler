@@ -1,0 +1,387 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  #crs-header {
+    width: 100%; 
+    height: auto; 
+  }
+  
+
+#navigation{
+    width: 100%;
+    min-height: 2px;
+    background-color: #F3F6FF;
+    
+}
+
+#arrow {
+    margin-left: 15px;
+    width: 1%;
+}
+
+#arrow:select{
+    margin-left: 15px;
+    width: 1%;
+
+}
+
+
+.back-arrow {
+
+    position: fixed; 
+    cursor: pointer;
+    width: 10px; 
+    height: auto; 
+}
+
+#arrow:active{
+    transform: translateY(4px);
+}
+
+#main-div{
+    width: 100%;
+    background-color: black;
+}
+
+#divL{
+    background-color: #F3F6FF;
+    width: 25%;
+    float: left;
+    min-height: 670px;
+    /* padding: 1%; */
+}
+
+/* SIDEBAR */
+
+.button-2 { 
+  size: 18px;
+  background-color: #EBEFFD;
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 8px 8px 8px 8px;
+  font-size: 15px;
+  border: #ffffff00;
+  box-shadow: 0px 1px 0.7px #00000029;
+}
+
+.button-2:hover {
+  background-color: green;
+  cursor: pointer; /* Change the cursor to a hand pointer when hovering over the button */
+}
+
+.button-2:active {
+  transform: scale(0.95); /* Make the button slightly smaller when it's being clicked */
+}
+
+#subjectList {
+    background-color: rgb(253, 253, 253);
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    width: 90%;
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    box-shadow: 2px 2px lightgray;
+}
+
+#subHead{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 17px;
+    color:gray;
+    
+}
+
+.subjects-dropdown{
+    width: 93%;
+    position: relative;
+    margin-left: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px lightgray;
+
+}
+
+.subjects-dropdown * {
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    
+}
+
+.select{
+    background: #363a43;
+    background-color: rgb(253, 253, 253);
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding: 1em ;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    height: 40px;
+    cursor: pointer;
+    transition: background 0.3s;
+
+}
+
+.select-clicked {
+    border: 1px #363a43 solid;
+    box-shadow: 1px 1px lightgray;
+}
+
+/* change color when hovering on dropbox */
+.select:hover{
+    background: rgb(232, 232, 232);
+}
+
+.caret{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid lightgray;
+    transition: 0.3s;
+
+}
+/* 
+
+rotate style
+
+*/
+
+.caret-rotate {
+    transform: rotate(180deg);
+}
+
+/* CONTENT SANG DROPBOX */
+
+.menu {
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background:  rgb(253, 253, 253);
+    border: 1px #363a43 solid;
+    box-shadow: 1px 1px lightgray;
+    border-radius: 10px;
+    color: #9fa5b5;
+    position: absolute;
+    top: 3em;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    opacity: 0;
+    display: none;
+    transition: 0.2s;
+    z-index: 1;
+}
+
+.menu li {
+    padding: 0.7em 0.5em;
+    margin: 0.3em 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.menu li:hover {
+    background: #f1f1f1;
+
+}
+
+.Active{
+    background: #5b5f6d;
+}
+
+/*
+
+open styles
+
+*/
+
+.menu-open{
+    display: block;
+    opacity: 1;
+} 
+
+
+/* MAIN AREA ( TABLE */
+
+
+#divR{
+    background-color: #F3F6FF;
+    width: 75%;
+    float: right;
+    min-height: 670px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 0;
+
+    box-sizing: border-box;
+}
+
+table, td {
+    padding: 1rem;
+
+}
+
+td {
+    width: 128px;
+    height: 46px;
+    background: #F3F6FF;
+    text-align: center;
+    margin: 0;
+    border-radius: 1px;
+    border: 1px solid #E5E5E5; /* Add a border */
+    color: #333; /* Change the text color */
+}
+
+.table_header {
+    width: 97%;
+    height: 10%;
+    background-color: #F0F1F4;
+    padding: .8rem 1rem;
+
+    position: sticky;
+    top: 0;
+    box-shadow: 2px 2px lightgray;
+    /* Border Radius at the top */
+
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    border-radius: 5px 5px 0px 0px; 
+
+    overflow:hidden;
+
+}
+
+.table_body {
+
+    width: 98%;
+    max-height: 81%;
+    background-color: #f6f6f8;
+
+    margin: .8rem auto;
+    border-radius: 8px;
+
+    /* overflow:hidden; */
+    overflow-x: hidden;
+    overflow-y: scroll;
+    
+
+}
+
+.hidden {
+    visibility:collapse;
+}
+
+#hide {
+    visibility:hidden;
+}
+
+
+
+main.table {
+    width: 70vw;
+    height: 70vh;
+    background-color: #F3F6FF;
+    box-shadow: 0 2px 2px 2px lightgray;
+    border-radius: 10px;
+    margin-left: -px;
+
+
+    margin-top: -50px;
+
+    
+}
+
+.table_header thead th {
+    background-color: #F0F1F4;
+    display:flexbox;
+    font-size: 15.5px;
+    padding: 1rem;
+}
+
+
+
+#expand:active{
+    transform: translateY(4px);
+}
+
+
+
+.table_body::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: #F5F5F5;
+}
+
+.table_body::-webkit-scrollbar {
+    width: 0.6rem;
+    height: 0.5rem;
+}
+
+.table_body::-webkit-scrollbar-thumb {
+    border-radius: 0.5rem;
+    background-color: #0004;
+    visibility: hidden;
+    
+}
+
+.table_body:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+
+    
+}
+
+#time {
+    background-color: #f6f6f8;
+    font-size: 10px;
+}
+
+
+#divR {
+   display:flex;
+   float:right;
+}
+
+#subjects {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.subject {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #EBEFFD;
+    color: black;
+    width: 200px;
+}
+
+.left{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    margin-left: 40px;
+}
+
+.right{
+    flex: 4;
+    padding: 20px 0px 200px 0px;
+    box-sizing: border-box;
+}
+
+
+
