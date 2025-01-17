@@ -1,0 +1,279 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #F8FAFF;
+}
+
+#student-id{
+  height: 350px;
+  width: auto;
+}
+
+.search-bar{
+  size: 18px;
+  background-color: #EBEFFD;
+  width: 300px;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 8px 8px 8px 8px;
+  font-size: 15px;
+  border: #ffffff00;
+  box-shadow: 0px 1px 0.7px #00000029;
+}
+
+#crs-header {
+  width: 100%; 
+  height: auto; 
+}
+
+div .sidebar-open {
+  width: 5px;
+  position: absolute;
+  top: 50%;
+  left: 1%;
+  right:5%;
+  transform: translateY(-50%);
+  display: block; /* Change this to block to make the element visible */
+  cursor:pointer;
+}
+
+.sidebar-open:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.sidebar-close {
+  position: absolute;
+  top: 20px;
+  right:20px;
+  font-size: 30px;
+  color: #818181;
+  cursor: pointer;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+a.popup-link {
+  color: #0000004f;
+  text-decoration: none; 
+  font-size: 10px; 
+  padding: 10px;
+  text-decoration: underline;
+}
+
+a.popup-link:hover {
+  font-size: 12px;
+  color: #00000095;
+  text-decoration: underline;
+}
+.popup-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 20%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: #F8FAFF; /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 2%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: left;
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+}
+
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.sidebar-category{
+  font-size:30px;
+  float:left;
+  font-weight: 50;
+  padding:5px 20px 5px 20px;
+}
+
+.button-1 { 
+  size: 18px;
+  background-color: #EBEFFD;
+  width: 250px;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 8px 8px 8px 8px;
+  font-size: 15px;
+  border: #ffffff00;
+  box-shadow: 0px 1px 0.7px #00000029;
+}
+
+.button-1:hover {
+  background-color: green;
+  cursor: pointer; /* Change the cursor to a hand pointer when hovering over the button */
+}
+
+.button-1:active {
+  transform: scale(0.95); /* Make the button slightly smaller when it's being clicked */
+}
+
+
+.button-2 { 
+  size: 18px;
+  background-color: #EBEFFD;
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 8px 8px 8px 8px;
+  font-size: 15px;
+  border: #ffffff00;
+  box-shadow: 0px 1px 0.7px #00000029;
+}
+
+.button-2:hover {
+  background-color: green;
+  cursor: pointer; /* Change the cursor to a hand pointer when hovering over the button */
+}
+
+.button-2:active {
+  transform: scale(0.95); /* Make the button slightly smaller when it's being clicked */
+}
+
+.content-1{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  text-align: left;
+  margin-left: 40px;
+}
+
+.content-2{
+  flex:1;
+  padding: 20px 60px 0px 0px;
+  box-sizing: border-box;
+}
+
+.content-3{
+  flex: 4;
+  padding: 20px 0px 200px 0px;
+  box-sizing: border-box;
+}
+
+.identifier{
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.512);
+  margin-bottom:1px;
+}
+
+.student-info{
+  margin-top:0px;
+  margin-bottom: 2px;
+}
+
+.dropbtn {
+  size: 20px;
+  background-color: #F8FAFF;
+  color: black;
+  width: 251.56px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 0.7px #7c2d2d;
+  margin: 10px 10px 20px 10px;
+  font-size: 20px;
+}
+
+.dropbtn:hover {
+  background-color: black;
+  cursor: pointer; /* Change the cursor to a hand pointer when hovering over the button */
+}
+
+.dropbtn:active {
+  transform: scale(0.95); /* Make the button slightly smaller when it's being clicked */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+#pdf-container {
+  width: 100%;
+  height: 60vh;
+  top: 0;
+  right: 0;
+}
